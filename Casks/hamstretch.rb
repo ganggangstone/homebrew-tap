@@ -1,6 +1,6 @@
 cask "hamstretch" do
-  version "0.1.0"
-  sha256 "522395be8aae6865cc17a80b7016bb93d39b491f1f46c02819253e764431dc19"
+  version "0.1.1"
+  sha256 "a649b901406e418b7bbec9bb31e925a357dd5a6a16c2eb85b944fd33f3ed320a"
 
   url "https://github.com/ganggangstone/hamstretch/releases/download/v#{version}/Hamstretch_#{version}_universal.dmg"
   name "Hamstretch"
