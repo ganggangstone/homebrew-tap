@@ -43,7 +43,7 @@ class AgentHud < Formula
         "hooks": {
           "SessionStart": [
             { "hooks": [ { "type": "command",
-              "command": "agent-hud --register \\"$PWD\\" >/dev/null 2>&1" } ] }
+              "command": "nohup agent-hud --register \\"$PWD\\" >/dev/null 2>&1 & disown" } ] }
           ]
         }
 
