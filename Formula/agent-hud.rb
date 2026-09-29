@@ -35,7 +35,10 @@ class AgentHud < Formula
       Start it in the background:
         brew services start agent-hud
 
-      Then open http://127.0.0.1:7717
+      Then run `agent-hud open`, or open http://127.0.0.1:41717
+
+      For an app icon in Launchpad as well:
+        brew install --cask ganggangstone/tap/agent-hud-app
 
       To have projects appear in the dashboard as you work, add a SessionStart
       hook to ~/.claude/settings.json:
@@ -61,14 +64,16 @@ class AgentHud < Formula
   end
 
   test do
-    # The dashboard serves on a fixed port and writes to AGENT_HUD_HOME, so point
-    # both at the sandbox and check that it answers before shutting it down.
+    # Point the data directory and the port at the sandbox, so a dashboard already
+    # running on this machine is left alone, and check that it answers.
+    port = free_port
     ENV["AGENT_HUD_HOME"] = testpath/"data"
+    ENV["AGENT_HUD_PORT"] = port.to_s
     pid = spawn bin/"agent-hud"
     begin
       sleep 3
-      assert_match "Agent HUD", shell_output("curl -fsS http://127.0.0.1:7717/")
-      assert_match "panels", shell_output("curl -fsS http://127.0.0.1:7717/api/state")
+      assert_match "Agent HUD", shell_output("curl -fsS http://127.0.0.1:#{port}/")
+      assert_match "panels", shell_output("curl -fsS http://127.0.0.1:#{port}/api/state")
     ensure
       Process.kill "TERM", pid
       Process.wait pid
