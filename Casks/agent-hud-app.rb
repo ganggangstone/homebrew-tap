@@ -14,8 +14,7 @@ cask "agent-hud-app" do
 
   # The app is not signed. Clear the download mark so macOS opens it without the
   # "cannot verify the developer" prompt.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Agent HUD.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Agent HUD.app"]
   end
 end
