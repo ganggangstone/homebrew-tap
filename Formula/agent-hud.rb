@@ -1,8 +1,8 @@
 class AgentHud < Formula
   desc "Local dashboard for your coding agents' skills, instructions, and plugin state"
   homepage "https://github.com/ganggangstone/agent-hud"
-  url "https://github.com/ganggangstone/agent-hud/archive/refs/tags/v0.4.3.tar.gz"
-  sha256 "53b364d1f9cc0529c7e4806cd9196cd896e3e12c84767acd359c7a763ccfc0f9"
+  url "https://github.com/ganggangstone/agent-hud/archive/refs/tags/v0.5.0.tar.gz"
+  sha256 "1326b4620dc5ce30e464f6c7eeb686740fa87ae158f60cfb937506e690c01bd0"
   license "MIT"
   head "https://github.com/ganggangstone/agent-hud.git", branch: "main"
 
