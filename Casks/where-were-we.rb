@@ -1,6 +1,6 @@
 cask "where-were-we" do
-  version "0.3.0"
-  sha256 "1c59cc62745de1db0394c79c52d3166f5d919e2752fc95272ce1656071c90ded"
+  version "0.4.0"
+  sha256 "96e37519f8fe504fbe72e6739d354b0c0452299d772a7c656d3778ad5d50d13c"
 
   url "https://github.com/ganggangstone/where-were-we/releases/download/v#{version}/where-were-we_#{version}_aarch64-apple-darwin.zip"
   name "where-were-we"
