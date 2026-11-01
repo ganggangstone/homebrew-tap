@@ -1,6 +1,6 @@
 cask "agent-hud-app" do
-  version "0.6.7"
-  sha256 "6aa3b8daa3697417cab5117373aa63cdd02caf247eb63a4a060fe0b3aeb241a9"
+  version "0.6.8"
+  sha256 "8747b37254e78d49d6c72caa2d863bbcc8e687058ee94c8bf76f66a54232ee33"
 
   url "https://github.com/ganggangstone/agent-hud/archive/refs/tags/v#{version}.tar.gz"
   name "Agent HUD"
